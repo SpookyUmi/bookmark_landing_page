@@ -11,10 +11,6 @@
 
   <title>Frontend Mentor | Bookmark landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-
-  </style>
 </head>
 
 <body>
@@ -41,7 +37,7 @@
 
   <div class="body">
 
-    <article class="firstpart">
+    <section class="firstpart">
       <img src="./images/illustration-hero.svg" alt="">
 
       <div class="manager">
@@ -53,105 +49,165 @@
         <button class="blue">Get it on Chrome</button>
         <button class="white">Get it on Firefox</button>
       </div>
-    </article>
-    <article class="secondpart">
-      <h2>Features</h2>
+    </section>
+    <section class="secondpart">
+      <h3>Features</h3>
 
       <p>Our aim is to make it quick and easy for you to access your favourite websites.
         Your bookmarks sync between your devices so you can access them on the go.</p>
 
-      Simple Bookmarking
-      Speedy Searching
-      Easy Sharing
+      <a href="">
+        Simple Bookmarking
+      </a>
+      <a href="">
+        Speedy Searching
+      </a>
+      <a href="">
+        Easy Sharing
+      </a>
+      <div class="oneclick">
+        <img src="./images/illustration-features-tab-1.svg" alt="">
+        <h3>Bookmark in one click</h3>
 
-      Bookmark in one click
+        <p>Organize your bookmarks however you like. Our simple drag-and-drop interface
+          gives you complete control over how you manage your favourite sites.</p>
 
-      Organize your bookmarks however you like. Our simple drag-and-drop interface
-      gives you complete control over how you manage your favourite sites.
+        <button class="blue hidden">More Info</button>
+      </div>
+      <div class="intelligent">
+        <img src="./images/illustration-features-tab-2.svg" alt="">
+        <h3>Intelligent search</h3>
 
-      More Info
+        <p>Our powerful search feature will help you find saved sites in no time at all.
+          No need to trawl through all of your bookmarks.</p>
 
-      Intelligent search
+        <button class="blue hidden">More Info</button>
+      </div>
+      <div class="share">
+        <img src="./images/illustration-features-tab-3.svg" alt="">
+        <h3>Share your bookmarks</h3>
 
-      Our powerful search feature will help you find saved sites in no time at all.
-      No need to trawl through all of your bookmarks.
+        <p>Easily share your bookmarks and collections with others. Create a shareable
+          link that you can send at the click of a button.</p>
 
-      More Info
+        <button class="blue hidden">More Info</button>
+      </div>
 
-      Share your bookmarks
+    </section>
 
-      Easily share your bookmarks and collections with others. Create a shareable
-      link that you can send at the click of a button.
+    <section class="thirdpart">
+      <h3>Download the extension</h3>
 
-      More Info
-    </article>
+      <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve
+        got a favourite you’d like us to prioritize.</p>
 
-    Download the extension
+      <div class="chrome-card">
+        <img src="./images/logo-chrome.svg" alt="">
+        <h4>Add to Chrome</h4>
+        <p>Minimum version 62</p>
+        <img src="./images/bg-dots.svg" alt="">
+        <button class="blue">Add & Install Extension</button>
+      </div>
 
-    We’ve got more browsers in the pipeline. Please do let us know if you’ve
-    got a favourite you’d like us to prioritize.
+      <div class="firefox-card">
+        <img src="./images/logo-firefox.svg" alt="">
+        <h4>Add to Firefox</h4>
+        <p>Minimum version 55</p>
+        <img src="./images/bg-dots.svg" alt="">
+        <button class="blue">Add & Install Extension</button>
+      </div>
 
-    Add to Chrome
-    Minimum version 62
-    Add & Install Extension
+      <div class="opera-card">
+        <img src="./images/logo-opera.svg" alt="">
+        <h4>Add to Opera</h4>
+        <p>Minimum version 46</p>
+        <img src="./images/bg-dots.svg" alt="">
+        <button class="blue">Add & Install Extension</button>
+      </div>
+    </section>
 
-    Add to Firefox
-    Minimum version 55
-    Add & Install Extension
+    <section class="faq">
+      <h3>Frequently Asked Questions</h3>
 
-    Add to Opera
-    Minimum version 46
-    Add & Install Extension
+      <p>Here are some of our FAQs. If you have any other questions you’d like
+        answered please feel free to email us.</p>
+      <div class="faq-list">
+        <!-- Question 1 -->
+        <div class="question">
+          <h5>What is Bookmark?</h5>
+          <img src="./images/icon-arrow.svg" alt="">
+        </div>
+        <div class="answer">
+          <p>
+            <!-- Answer 1 -->
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+          </p>
+        </div>
+        <div class="question">
+          <!-- Question 2 -->
+          <h5>How can I request a new browser?</h5>
+          <img src="./images/icon-arrow.svg" alt="">
+        </div>
+        <div class="answer">
+          <p>
+            <!-- Answer 2 -->
+            Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+          </p>
+        </div>
+        <div class="question">
+          <!-- Question 3 -->
+          <h5>Is there a mobile app?</h5>
+          <img src="./images/icon-arrow.svg" alt="">
+        </div>
+        <div class="answer">
+          <p>
+            <!-- Answer 3 -->
+            Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+            sollicitudin ex et ultricies bibendum.
+          </p>
+        </div>
+        <div class="question">
+          <!-- Question 4 -->
+          <h5>What about other Chromium browsers?</h5>
+          <img src="./images/icon-arrow.svg" alt="">
+        </div>
+        <div class="answer">
+          <p>
+            <!-- Answer 4 -->
+            Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+            vitae neque eget nisl gravida pellentesque non ut velit.
+          </p>
+        </div>
+      </div>
 
-    Frequently Asked Questions
-
-    Here are some of our FAQs. If you have any other questions you’d like
-    answered please feel free to email us.
-
-    <!-- Question 1 -->
-    What is Bookmark?
-
-    <!-- Answer 1 -->
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-    justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-
-    <!-- Question 2 -->
-    How can I request a new browser?
-
-    <!-- Answer 2 -->
-    Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
-    Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-    ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
-    Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-
-    <!-- Question 3 -->
-    Is there a mobile app?
-
-    <!-- Answer 3 -->
-    Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
-    urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
-    sollicitudin ex et ultricies bibendum.
-
-    <!-- Question 4 -->
-    What about other Chromium browsers?
-
-    <!-- Answer 4 -->
-    Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
-    vitae neque eget nisl gravida pellentesque non ut velit.
-
-    More Info
+      <button class="blue">More Info</button>
+    </section>
 
   </div>
 
-  35,000+ already joined
+  <div class="footer">
+    <p class="caps">35,000+ already joined</p>
 
-  Stay up-to-date with what we’re doing
+    <h3>Stay up-to-date with what we’re doing</h3>
+    <input type="email">
+    <button class="peach">Contact Us</button>
 
-  Contact Us
-
-  Features
-  Pricing
-  Contact
+    <div class="black-footer">
+      <img src="./images/logo-bookmark.svg" alt="">
+      <a href="">Features</a>
+      <a href="">Pricing</a>
+      <a href="">Contact</a>
+      <div class="socials">
+        <a href=""><img src="./images/icon-facebook.svg" alt=""></a>
+        <a href=""><img src="./images/icon-twitter.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
 
   <footer>
     <p class="attribution">
