@@ -9,13 +9,88 @@ html {
 }
 
 body {
+  font-family: 'Rubik', sans-serif;
   text-align: center;
 }
 
-/* --- header --- */
+body a {
+  text-decoration: none;
+}
+
+body li {
+  list-style: none;
+}
+
+/* --- topbar --- */
+
+.topbar {
+  position: relative;
+}
+
+.topbar-img {
+ /*  display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 0 1.5rem;
+}
+
+.closed {
+  display: none;
+}
+
+.open {
+  height: 170vw;
+  width: 100%;
+  background: hsla(229, 31%, 21%, 0.95);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  top: -130%;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  z-index: 3;
+}
+
+.open a {
+  color: white;
+}
+
+.toggle-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.toggle-socials {
+
+}
 
 /* --- div.body --- */
 /*? --- firstpart --- */
+
+.first-img {
+  position: relative;
+  height: 55vw;
+  background: hsl(231, 69%, 60%);
+  margin-left: 4.5rem;
+  margin-top: 4rem;
+  border-radius: 0 0 0 30%;
+}
+
+.firstpart img {
+  position: absolute;
+  left: -60px;
+  top: -50px;
+  width: 360px;
+  margin: 0 auto;
+}
+
 /*? --- secondpart --- */
 /*? --- thirdpart --- */
 /*? --- faq --- */

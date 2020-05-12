@@ -7,6 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Bookmark landing page</title>
@@ -15,8 +16,15 @@
 
 <body>
   <header class="topbar">
-    <img src="./images/logo-bookmark.svg" alt="bookmark">
-    <div class="closed">
+    <div class="topbar-img">
+      <img src="./images/logo-bookmark.svg" alt="bookmark">
+      <img src="./images/icon-hamburger.svg" alt="burger" class="togglenav">
+    </div>
+    <div class="closed" id="menu">
+      <div class="toggle-img">
+        <img src="./images/shapes.svg" alt="" width="35px">
+        <img src="./images/icon-close.svg" alt="" width="15px" height="15px" class="close-button">
+      </div>
       <ul>
         <li><a href="">
             Features
@@ -31,14 +39,19 @@
           <button class="peach">Login</button>
         </li>
       </ul>
+      <div class="toggle-socials">
+        <a href=""><img src="./images/icon-facebook.svg" alt=""></a>
+        <a href=""><img src="./images/icon-twitter.svg" alt=""></a>
+      </div>
     </div>
-    <img src="./images/icon-hamburger.svg" alt="burger">
   </header>
 
   <div class="body">
 
     <section class="firstpart">
-      <img src="./images/illustration-hero.svg" alt="">
+      <div class="first-img">
+        <img src="./images/illustration-hero.svg" alt="">
+      </div>
 
       <div class="manager">
         <h1>A Simple Bookmark Manager</h1>
@@ -215,6 +228,18 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+
+  <script>
+    let toggleNavButton = document.querySelector('.togglenav');
+    toggleNavButton.addEventListener('click', () => {
+      document.querySelector('#menu').classList.toggle('open')
+    })
+
+    let closeButton = document.querySelector('.close-button');
+    closeButton.addEventListener('click', () => {
+      document.querySelector('#menu').classList.remove('open')
+    })
+  </script>
 </body>
 
 </html>
