@@ -79,7 +79,8 @@ body li {
   height: 55vw;
   background: hsl(231, 69%, 60%);
   margin-left: 4.5rem;
-  margin-top: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
   border-radius: 0 0 0 30%;
 }
 
@@ -92,6 +93,14 @@ body li {
 }
 
 /*? --- secondpart --- */
+
+.blue {
+  color: white;
+  background: hsl(231, 69%, 60%);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
 /*? --- thirdpart --- */
 /*? --- faq --- */
 
