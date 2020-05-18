@@ -8,6 +8,15 @@ html {
   margin: 0;
 }
 
+:root {
+  --mediumgray: hsl(229, 8%, 60%);
+  --lightgray: hsl(229, 8%, 95%);
+  --darkgray: hsl(229, 8%, 30%);
+  --blue: hsl(231, 69%, 60%);
+  --darkblue: hsl(229, 31%, 21%);
+  --pinkred: hsl(0, 94%, 66%);
+}
+
 body {
   font-family: 'Rubik', sans-serif;
   text-align: center;
@@ -24,11 +33,11 @@ body li {
 /*? --- buttons --- */
 
 .blue, .white, .pink {
-  margin: 1rem;
-  padding: 1rem;
+  font-weight: 500;
+  padding: 0.8rem;
   border-radius: 5px;
   border: none;
-  box-shadow: 0px 5px 2px hsl(229, 8%, 80%);
+  box-shadow: 0px 5px 2px hsl(229, 8%, 90%);
 }
 
 /* --- topbar --- */
@@ -87,7 +96,7 @@ body li {
 .first-img {
   position: relative;
   height: 55vw;
-  background: hsl(231, 69%, 60%);
+  background: var(--blue);
   margin-left: 4.5rem;
   margin-top: 5rem;
   margin-bottom: 3rem;
@@ -102,16 +111,62 @@ body li {
   margin: 0 auto;
 }
 
-/*? --- secondpart --- */
+.manager {
+  display: flex;
+  flex-direction: column;
+}
+
+.manager h1 {
+margin: 0 1.5rem;
+}
+
+.manager p {
+margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+color: var(--mediumgray);
+}
+
+.buttons {
+  margin-bottom: 2rem;
+}
 
 .blue {
+  margin: 2rem 0.5rem;
   color: white;
-  background: hsl(231, 69%, 60%);
+  background: var(--blue);
 }
 
 .white {
-  color: hsl(229, 8%, 30%);
-  background: hsl(229, 8%, 95%);
+  margin: 2rem 0.5rem;
+  color: var(--darkgray);
+  background: var(--lightgray);
+}
+
+.white:hover {
+  background-color: hsla(228, 10%, 90%);
+}
+
+.blue:hover {
+  background-color: hsl(231, 69%, 55%);
+}
+
+/*? --- secondpart --- */
+
+.secondpart {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondpart h3 {
+  margin: 1rem;
+}
+
+.secondpart p {
+  color: var(--mediumgray);
+  margin: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.secondpart a {
+  color: var(--darkgray);
 }
 
 /*? --- thirdpart --- */
