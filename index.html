@@ -22,19 +22,23 @@
     </div>
     <div class="closed" id="menu">
       <div class="toggle-img">
-        <img src="./images/shapes.svg" alt="" width="35px">
+        <img src="./images/group.svg" alt="" width="35px">
         <img src="./images/icon-close.svg" alt="" width="15px" height="15px" class="close-button">
       </div>
       <ul>
+        <hr>
         <li><a href="">
             Features
           </a></li>
+        <hr>
         <li><a href="">
             Pricing
           </a></li>
+        <hr>
         <li><a href="">
             Contact
           </a></li>
+        <hr>
         <li>
           <button class="peach">Login</button>
         </li>
@@ -70,17 +74,23 @@
       <p>Our aim is to make it quick and easy for you to access your favourite websites.
         Your bookmarks sync between your devices so you can access them on the go.</p>
 
-      <a href="">
-        Simple Bookmarking
-      </a>
-      <a href="">
-        Speedy Searching
-      </a>
-      <a href="">
-        Easy Sharing
-      </a>
+      <hr>
+      <li class="simple">
+        <a href="#ones">Simple Bookmarking</a>
+      </li>
+      <hr id="thick">
+      <li class="speedy">
+        <a href="#twos">Speedy Searching</a>
+      </li>
+      <hr id="thick">
+      <li class="easy">
+        <a href="#threes">Easy Sharing</a>
+      </li>
+      <hr id="thick">
       <div class="oneclick">
-        <img src="./images/illustration-features-tab-1.svg" alt="">
+        <div class="img-oneclick">
+          <img src="./images/illustration-features-tab-1.svg" alt="">
+        </div>
         <h3>Bookmark in one click</h3>
 
         <p>Organize your bookmarks however you like. Our simple drag-and-drop interface
@@ -239,6 +249,11 @@
     let closeButton = document.querySelector('.close-button');
     closeButton.addEventListener('click', () => {
       document.querySelector('#menu').classList.remove('open')
+    })
+
+    let features = document.querySelector('.simple');
+    features.addEventListener('click', () => {
+      document.querySelector('.oneclick').classList.add('active-bookmark')
     })
   </script>
 </body>
