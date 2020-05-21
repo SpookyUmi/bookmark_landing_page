@@ -224,9 +224,16 @@ color: var(--mediumgray);
 }
 
 .secondpart li {
+  margin: 1rem auto;
+}
+
+.secondpart a {
   font-weight: 500;
   color: var(--darkgray);
-  margin: 1rem auto;
+}
+
+.secondpart a:hover {
+  opacity: 50%;
 }
 
 .secondpart hr {
@@ -241,7 +248,7 @@ color: var(--mediumgray);
 }
 
 .oneclick {
-  display: none;
+  /* display: none; */
 }
 
 .active-bookmark div {
@@ -254,8 +261,21 @@ color: var(--mediumgray);
   border-radius: 0 0 0 30%;
 }
 
+.img-oneclick {
+  position: relative;
+  height: 55vw;
+  background: var(--blue);
+  margin-left: 4.5rem;
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+  border-radius: 0 0 0 30%;
+}
+
 .img-oneclick img {
-  width: 360px;
+  position: absolute;
+  left: -15%;
+  top: -25%;
+  width: 330px;
 }
 
 /*? --- thirdpart --- */
