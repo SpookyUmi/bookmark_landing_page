@@ -73,21 +73,17 @@
 
       <p>Our aim is to make it quick and easy for you to access your favourite websites.
         Your bookmarks sync between your devices so you can access them on the go.</p>
-
-      <hr>
-      <li class="simple">
-        <a href="#ones">Simple Bookmarking</a>
-      </li>
-      <hr id="thick">
-      <li class="speedy">
-        <a href="#twos">Speedy Searching</a>
-      </li>
-      <hr id="thick">
-      <li class="easy">
-        <a href="#threes">Easy Sharing</a>
-      </li>
-      <hr id="thick">
-      <div class="oneclick">
+      <div class="tabs">
+        <hr>
+        <button role="tab" id="simple" aria-selected="true">Simple Bookmarking</button>
+        <!-- <hr id="thick"> -->
+        <hr>
+        <button role="tab" id="speedy" aria-selected="false">Speedy Searching</button>
+        <hr>
+        <button role="tab" id="easy" aria-selected="false">Easy Sharing</button>
+        <hr>
+      </div>
+      <div class="oneclick" aria-labelledby="simple" role="tabpanel">
         <div class="img-oneclick">
           <img src="./images/illustration-features-tab-1.svg" alt="">
         </div>
@@ -98,7 +94,8 @@
 
         <button class="blue hidden">More Info</button>
       </div>
-      <div class="intelligent">
+
+      <div class="intelligent" aria-labelledby="speedy" role="tabpanel" hidden>
         <img src="./images/illustration-features-tab-2.svg" alt="">
         <h3>Intelligent search</h3>
 
@@ -107,7 +104,8 @@
 
         <button class="blue hidden">More Info</button>
       </div>
-      <div class="share">
+
+      <div class="share" aria-labelledby="easy" role="tabpanel" hidden>
         <img src="./images/illustration-features-tab-3.svg" alt="">
         <h3>Share your bookmarks</h3>
 
@@ -251,10 +249,40 @@
       document.querySelector('#menu').classList.remove('open')
     })
 
-    /*  let features = document.querySelector('.simple');
-     features.addEventListener('click', () => {
-       document.querySelector('.oneclick').classList.add('active-bookmark')
-     }) */
+    const tabs = document.querySelector('.tabs');
+    const tabButtons = document.querySelectorAll('[role="tab"]');
+    const tabPanels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+
+    function handleTabClick(event) {
+      console.log(event.currentTarget);
+      // hide all tab tab panels
+      tabPanels.forEach(panel => {
+        panel.hidden = true;
+      });
+      // mark all tabs as unselected
+      tabButtons.forEach(tab => {
+        // ? tab.ariaSelected = false;
+        tab.setAttribute('aria-selected', false);
+      });
+      // mark the clicked tab as selected
+      event.currentTarget.setAttribute('aria-selected', true);
+      // find the associated tabPanel and show it
+      const { id } = event.currentTarget;
+
+      // METHOD 1
+      /*
+      const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
+      tabPanel.hidden = false;
+      */
+
+      // METHOD 2 - find in the array of tabs
+      const tabPanel = tabPanels.find(
+        panel => panel.getAttribute('aria-labelledby') === id
+      );
+      tabPanel.hidden = false;
+    }
+
+    tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
   </script>
 </body>
 

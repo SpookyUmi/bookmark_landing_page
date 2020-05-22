@@ -223,35 +223,35 @@ color: var(--mediumgray);
   margin: 0 1.5rem 1.5rem 1.5rem;
 }
 
-.secondpart li {
+.tabs button {
   margin: 1rem auto;
-}
-
-.secondpart a {
   font-weight: 500;
   color: var(--darkgray);
+  border: none;
+  background: none;
 }
 
-.secondpart a:hover {
+.tabs button:hover {
   opacity: 50%;
 }
 
-.secondpart hr {
+.tabs hr {
   width: 80%;
   margin: 0 auto;
   border-top: 1px solid hsl(229, 8%, 80%);
   border-bottom: 1px solid white;
 }
 
-.secondpart hr:last-of-type {
-  margin-bottom: 3rem;
+.tabs hr:last-of-type {
+  margin-bottom: 1rem;
 }
 
-.oneclick {
-  /* display: none; */
-}
+/* #thick {
+  border-top: 4px solid var(--pinkred);
+  width: 130px;
+} */
 
-.active-bookmark div {
+.oneclick div {
   position: relative;
   height: 55vw;
   background: var(--blue);
