@@ -30,6 +30,10 @@ body li {
   list-style: none;
 }
 
+body p {
+  color: var(--mediumgray);
+}
+
 /*? --- buttons --- */
 
 .blue, .white, .pink {
@@ -173,7 +177,6 @@ margin: 0 1.5rem;
 
 .manager p {
 margin: 1.5rem 1.5rem 0.5rem 1.5rem;
-color: var(--mediumgray);
 }
 
 .buttons {
@@ -212,6 +215,7 @@ color: var(--mediumgray);
 .secondpart {
   display: flex;
   flex-direction: column;
+  margin-bottom: 4.5rem;
 }
 
 .secondpart h3 {
@@ -219,7 +223,6 @@ color: var(--mediumgray);
 }
 
 .secondpart p {
-  color: var(--mediumgray);
   margin: 0 1.5rem 1.5rem 1.5rem;
 }
 
@@ -251,34 +254,71 @@ color: var(--mediumgray);
   width: 130px;
 } */
 
-.oneclick div {
+.img-tabpanel1, .img-tabpanel2, .img-tabpanel3 {
   position: relative;
-  height: 55vw;
+  height: 12rem;
   background: var(--blue);
-  margin-left: 4.5rem;
+  margin-right: 4.5rem;
   margin-top: 7rem;
   margin-bottom: 3rem;
-  border-radius: 0 0 0 30%;
+  border-radius: 0 30% 30% 0;
 }
 
-.img-oneclick {
-  position: relative;
-  height: 55vw;
-  background: var(--blue);
-  margin-left: 4.5rem;
-  margin-top: 7rem;
-  margin-bottom: 3rem;
-  border-radius: 0 0 0 30%;
-}
-
-.img-oneclick img {
+.img-tabpanel1 img, .img-tabpanel2 img, .img-tabpanel3 img {
   position: absolute;
-  left: -15%;
+  right: -15%;
+  width: 300px;
+}
+
+.img-tabpanel1 img {
   top: -25%;
-  width: 330px;
+}
+
+.img-tabpanel2 img {
+  top: -40%;
+}
+
+.img-tabpanel3 img {
+  top: -45%;
+}
+
+.tabpanel button {
+  display: none;
 }
 
 /*? --- thirdpart --- */
+
+.thirdpart p {
+ margin: 1rem 1.5rem 3rem 1.5rem;
+}
+
+.card {
+  margin: 3rem auto;
+  width: 17rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px hsl(229, 8%, 85%);
+}
+
+.card p {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dots {
+  width: 100%;
+}
+
+.logo {
+  width: 5.5rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card button {
+  width: 85%;
+  margin: 1.2rem auto;
+}
+
 /*? --- faq --- */
 
 /* --- footer --- */
