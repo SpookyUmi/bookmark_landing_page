@@ -44,6 +44,20 @@ body p {
   box-shadow: 0px 5px 2px hsl(229, 8%, 90%);
 }
 
+.pink {
+  color: white;
+  background: var(--pinkred);
+  box-shadow: none;
+  border: 1px solid var(--pinkred);
+}
+
+.pink:hover {
+  border: 1px solid var(--pinkred);
+  background: white;
+  color: var(--pinkred);
+  transition: 0.2s;
+}
+
 /*? --- hover properties --- */
 
 .topbar-img img:hover, .closed img:hover, button:hover {
@@ -228,6 +242,9 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
 
 .tabs button {
   margin: 1rem auto;
+}
+
+.tabs button, .question button {
   font-weight: 500;
   color: var(--darkgray);
   border: none;
@@ -238,7 +255,7 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
   opacity: 50%;
 }
 
-.tabs hr {
+.tabs hr, .faq hr {
   width: 80%;
   margin: 0 auto;
   border-top: 1px solid hsl(229, 8%, 80%);
@@ -288,6 +305,10 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
 
 /*? --- thirdpart --- */
 
+.thirdpart {
+  margin-bottom: 7rem;
+}
+
 .thirdpart p {
  margin: 1rem 1.5rem 3rem 1.5rem;
 }
@@ -321,9 +342,120 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
 
 /*? --- faq --- */
 
+.description {
+  margin-bottom: 4rem;
+}
+
+.description h3 {
+  margin: 1rem 4rem;
+}
+
+.description p {
+  margin: 1rem 2rem;
+}
+
+.faq hr {
+  width: 85vw;
+}
+
+.question {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+}
+
+.question img {
+  justify-self: flex-end;
+}
+
+.question button {
+  text-align: left;
+}
+
+.answer {
+  text-align: left;
+  margin: 2rem;
+}
+
+.blue {
+  margin-top: 3rem;
+}
+
+
 /* --- footer --- */
 
+.footer {
+  color: white;
+  margin-top: 6rem;
+  background: var(--blue);
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+}
 
+.blue-footer {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem;
+}
+
+.blue-footer p {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.blue-footer h3 {
+  margin-bottom: 1.5rem;
+}
+
+.blue-footer input {
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--mediumgray);
+  font-weight: 500;
+}
+
+.caps {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.black-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--darkblue);
+}
+
+.black-footer img {
+  width: 30px;
+  margin: 2rem 0;
+}
+
+.black-footer a {
+  color: var(--lightgray);
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 1rem;
+}
+
+.black-footer a:hover {
+ color: rgba(255, 255, 255, 0.294);
+ transition: 0.2s;
+}
+
+.black-footer li {
+  margin: 1rem auto;
+}
+
+footer {
+  display: none;
+}
 
 .attribution {
   font-size: 11px;
