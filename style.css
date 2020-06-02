@@ -100,6 +100,7 @@ body p {
 }
 
 .open a {
+  margin: 1rem auto;
   color: white;
   text-transform: uppercase;
 }
@@ -109,16 +110,13 @@ body p {
  transition: 0.2s;
 }
 
-.open li {
-  margin: 1rem auto;
-}
-
 .open hr {
+  margin: 0.5rem;
   border-top: 0.2px solid rgba(255, 255, 255, 0.294);
   border-bottom: 1px solid hsla(229, 40%, 21%, 0.95);
 }
 
-.open button {
+/* .versatile {
   color: white;
   font-size: 1rem;
   text-transform: uppercase;
@@ -127,13 +125,14 @@ body p {
   background: none;
   border: 2px solid white;
   border-radius: 5px;
+  margin-top: 1rem;
 }
 
-.open button:hover {
+.versatile:hover {
   background: white;
   color: hsla(229, 40%, 21%, 0.95);
   transition: 0.2s;
-}
+} */
 
 .toggle-img {
   display: flex;
@@ -164,7 +163,8 @@ body p {
 
 .first-img {
   position: relative;
-  height: 55vw;
+  height: 13.5rem;
+  /* width: 25rem; */
   background: var(--blue);
   margin-left: 4.5rem;
   margin-top: 7rem;
@@ -172,12 +172,12 @@ body p {
   border-radius: 0 0 0 30%;
 }
 
-.firstpart img {
+.first-img img {
   position: absolute;
   left: -60px;
   top: -50px;
   width: 360px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .manager {
@@ -274,6 +274,7 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
 .img-tabpanel1, .img-tabpanel2, .img-tabpanel3 {
   position: relative;
   height: 12rem;
+  /* width: 19rem; */
   background: var(--blue);
   margin-right: 4.5rem;
   margin-top: 7rem;
@@ -283,7 +284,8 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
 
 .img-tabpanel1 img, .img-tabpanel2 img, .img-tabpanel3 img {
   position: absolute;
-  right: -15%;
+  /* right: -15%; */
+  right: -40px;
   width: 300px;
 }
 
@@ -464,4 +466,45 @@ footer {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+
+/* --- topbar --- */
+
+.closed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pink {
+  font-weight: 500;
+  padding: 0.8rem;
+  border-radius: 5px;
+  box-shadow: 0px 5px 2px hsl(229, 8%, 90%);
+  color: white;
+  background: var(--pinkred);
+  border: 1px solid var(--pinkred);
+}
+
+.pink:hover {
+  border: 1px solid var(--pinkred);
+  background: white;
+  color: var(--pinkred);
+  transition: 0.2s;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 0 2rem;
+}
+
+.togglenav, .topbar hr {
+  display: none;
+}
+
 }
