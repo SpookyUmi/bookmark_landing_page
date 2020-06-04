@@ -31,6 +31,7 @@ body li {
 }
 
 body p {
+  font-size: 0.9rem;
   color: var(--mediumgray);
 }
 
@@ -254,6 +255,15 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
   opacity: 50%;
 }
 
+/* .tabs button::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin-top: 5px;
+  background: var(--primary);
+} */
+
 .tabs hr, .faq hr {
   width: 80%;
   margin: 0 auto;
@@ -263,6 +273,10 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
 
 .tabs hr:last-of-type {
   margin-bottom: 1rem;
+}
+
+.hr {
+  display: none;
 }
 
 /* #thick {
@@ -372,6 +386,11 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
 
 .question button {
   text-align: left;
+}
+
+.question button:hover {
+  color: var(--pinkred);
+  transition: 0.2s;
 }
 
 .answer {
@@ -544,8 +563,55 @@ footer {
 /* --- secondpart --- */
 
 .secondpart p {
-  margin: 1rem auto;
+  margin: 0 auto;
+  margin-bottom: 2rem;
   width: 60%;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tabs hr {
+  display: none;
+}
+
+.hr {
+  display: block;
+}
+
+.hr hr {
+  width: 80%;
+  margin: 0 auto;
+  border-top: 1px solid hsl(229, 8%, 80%);
+  border-bottom: 1px solid white;
+}
+
+/* .tabpanel h3, .tabpanel p {
+  width: 40%;
+  text-align: right;
+  margin: 0;
+} */
+
+.img-tabpanel1, .img-tabpanel2, .img-tabpanel3 {
+  /* margin-right: 60%; */
+  /* height: 15rem; */
+  width: 40%;
+  margin-right: 0;
+}
+
+/* --- faq --- */
+
+.faq {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.faq hr {
+  width: 90%;
 }
 
 }

@@ -80,6 +80,9 @@
         <button role="tab" id="easy" aria-selected="false">Easy Sharing</button>
         <hr>
       </div>
+      <div class="hr">
+        <hr>
+      </div>
       <div class="tabpanel" aria-labelledby="simple" role="tabpanel">
         <div class="img-tabpanel1">
           <img src="./images/illustration-features-tab-1.svg" alt="">
@@ -159,10 +162,10 @@
       <div class="faq-list">
         <!-- Question 1 -->
         <div class="question">
-          <button>What is Bookmark?</button>
+          <button id="one" role="question" aria-selected="false">What is Bookmark?</button>
           <img src="./images/icon-arrow.svg" alt="">
         </div>
-        <div class="answer">
+        <div class="answer" aria-labelledby="one" role="answer" hidden>
           <p>
             <!-- Answer 1 -->
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
@@ -172,10 +175,10 @@
         <hr>
         <div class="question">
           <!-- Question 2 -->
-          <button>How can I request a new browser?</button>
+          <button id="two" role="question" aria-selected="false">How can I request a new browser?</button>
           <img src="./images/icon-arrow.svg" alt="">
         </div>
-        <div class="answer">
+        <div class="answer" aria-labelledby="two" role="answer" hidden>
           <p>
             <!-- Answer 2 -->
             Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
@@ -187,10 +190,10 @@
         <hr>
         <div class="question">
           <!-- Question 3 -->
-          <button>Is there a mobile app?</button>
+          <button id="three" role="question" aria-selected="false">Is there a mobile app?</button>
           <img src="./images/icon-arrow.svg" alt="">
         </div>
-        <div class="answer">
+        <div class="answer" aria-labelledby="three" role="answer" hidden>
           <p>
             <!-- Answer 3 -->
             Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
@@ -201,10 +204,10 @@
         <hr>
         <div class="question">
           <!-- Question 4 -->
-          <button>What about other Chromium browsers?</button>
+          <button id="four" role="question" aria-selected="false">What about other Chromium browsers?</button>
           <img src="./images/icon-arrow.svg" alt="">
         </div>
-        <div class="answer">
+        <div class="answer" aria-labelledby="four" role="answer" hidden>
           <p>
             <!-- Answer 4 -->
             Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
@@ -292,6 +295,41 @@
     }
 
     tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
+
+    const questions = document.querySelector('.question');
+    const faqButtons = document.querySelectorAll('[role="question"]');
+    const faqAnswers = Array.from(document.querySelectorAll('[role="answer"]'));
+
+    function handleTabClick(event) {
+      console.log(event.currentTarget);
+      // hide all tab panels
+      faqAnswers.forEach(answer => {
+        answer.hidden = true;
+      });
+      // mark all tabs as unselected
+      faqButtons.forEach(button => {
+        // ? tab.ariaSelected = false;
+        button.setAttribute('aria-selected', false);
+      });
+      // mark the clicked tab as selected
+      event.currentTarget.setAttribute('aria-selected', true);
+      // find the associated tabPanel and show it
+      const { id } = event.currentTarget;
+
+      // METHOD 1
+      /*
+      const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
+      tabPanel.hidden = false;
+      */
+
+      // METHOD 2 - find in the array of tabs
+      const faqAnswer = faqAnswers.find(
+        answer => answer.getAttribute('aria-labelledby') === id
+      );
+      faqAnswer.hidden = false;
+    }
+
+    faqButtons.forEach(button => button.addEventListener('click', handleTabClick));
   </script>
 </body>
 
