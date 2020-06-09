@@ -429,6 +429,11 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
   margin-bottom: 1.5rem;
 }
 
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
 .blue-footer input {
   height: 2.5rem;
   margin-bottom: 1rem;
@@ -452,6 +457,12 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
   background: var(--darkblue);
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .black-footer img {
   width: 30px;
   margin: 2rem 0;
@@ -471,6 +482,10 @@ margin: 1.5rem 1.5rem 0.5rem 1.5rem;
 
 .black-footer li {
   margin: 1rem auto;
+}
+
+.social-links img:hover {
+  opacity: 0.5;
 }
 
 footer {
@@ -604,10 +619,10 @@ footer {
 }
 
 .text {
-  width: 50%;
+  width: 48%;
   position: absolute;
   top: 90%;
-  right: -5%;
+  right: 0;
 }
 
 .text button {
@@ -632,7 +647,38 @@ footer {
 
 /* --- thirdpart --- */
 
+.thirdpart p {
+  width: 60%;
+  margin: 1rem auto;
+}
 
+/* --- footer --- */
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.inputs button {
+  width: 60%;
+  height: 2.5rem;
+  margin-left: 1rem;
+}
+
+.black-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 /* --- faq --- */
 
